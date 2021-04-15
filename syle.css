@@ -2,15 +2,22 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 body{
+    min-height: 100vh;
+    background-color: #f1f5f8;
+}
+
+.wrapper{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
-    background-color: #f1f5f8;
+    min-height: 50vh;
+  
 }
 
 .spinner{
@@ -26,6 +33,7 @@ body{
     z-index:1;
     margin: -76px 0 0 -76px;
     display: none;
+
 }
 
 .active{
@@ -45,21 +53,78 @@ body{
     width: 400px;
 }
 
-.card label{
-    background: #3498db;
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-input[type="file"] {
-    position: fixed;
-    right: 100%;
-    bottom: 100%;
-   background: red;
-}
 
 img{
     width: 100%;
+    object-fit: cover;
+    height: 300px;
 }
+
+
+.upload{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.upload + label{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.upload:focus + label, .upload + label:hover{
+    background-color: rgb(155, 20, 20);
+}
+
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container h1{
+    line-height: 4;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.item{
+    width: 300px;
+    border: 2px solid black;
+    margin-bottom: 2rem;
+}
+
+.item h3{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    padding: 0.3rem 0;
+}
+
+.item h3:hover{
+    background-color: rgb(155, 20, 20);
+}
+
+
+
